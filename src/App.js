@@ -41,12 +41,15 @@ class App extends React.Component {
           onRowPrepared={(e) => {
             if (e.rowType == "group") {
               e.rowElement.style.height = "0";
+              const colName = e.columns[0].name;
+              const groupValue = e.data.items[0][colName];
+              if (groupValue == "Dallas") {
+                e.rowElement.style.display = "none";
+              }
             }
-            console.log(e);
             e.rowElement.style.padding = "0";
           }}
           onCellPrepared={(e) => {
-            //console.log("e", e);
             if (e.rowType == "group") {
               e.cellElement.style.padding = "0";
             }
@@ -56,21 +59,20 @@ class App extends React.Component {
           <SearchPanel visible={true} />
           <Grouping
             autoExpandAll={this.state.autoExpandAll}
-            allowCollapsing={false}
+            // allowCollapsing={false}
           />
           <Paging defaultPageSize={10} />
 
           <Column dataField="CompanyName" dataType="string" />
           <Column dataField="Phone" dataType="string" />
           <Column dataField="Fax" dataType="string" />
-          <Column dataField="City" dataType="string" />
+          <Column groupIndex={0} dataField="City" dataType="string" />
           <Column
             dataField="State"
             dataType="string"
-            groupIndex={0}
             allowGrouping={false}
-            groupCellComponent={GroupCell}
-            headerCellComponent={GroupCell}
+            //groupCellComponent={GroupCell}
+            //headerCellComponent={GroupCell}
           />
         </DataGrid>
 

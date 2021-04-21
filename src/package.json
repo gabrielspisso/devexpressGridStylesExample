@@ -1,0 +1,19 @@
+{
+  "name": "Record Grouping - DevExtreme Data Grid",
+  "description": "The DataGrid allows users to group data against a single column or multiple columns.\nTo group data, users can drag and drop column headers onto and from the area above the grid. This area is called the groupPanel. Set its visible property to true to show it.\nUsers can reorder headers within the groupPanel to change group hierarchy. To enable this functionality, set the allowColumnReordering property to \"true\".\nTo group data against a single column, apply the groupIndex property to it. This property accepts a zero-based index number that controls the column order. In this example, the data is grouped against the State column.\nYou can also use the grouping object to specify user interaction settings related to grouping. This demo illustrates the autoExpandAll property that specifies whether the groups appear expanded.\n",
+  "dependencies": {
+    "rrule": "2.6.6",
+    "react-dom": "16.14.0",
+    "react": "16.14.0",
+    "prop-types": "15.7.2",
+    "preact": "10.5.13",
+    "luxon": "1.26.0",
+    "jszip": "3.6.0",
+    "es6-object-assign": "1.1.0",
+    "devextreme-react": "20.2.6",
+    "devextreme-quill": "0.10.3",
+    "devextreme": "20.2.6",
+    "devexpress-gantt": "2.0.24",
+    "devexpress-diagram": "2.0.18"
+  }
+}
